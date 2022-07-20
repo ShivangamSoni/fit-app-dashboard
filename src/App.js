@@ -1,8 +1,10 @@
+import Routing from "./pages";
+
 const App = () => {
   return (
-    <>
-      <main>Dash App</main>
-    </>
+    <main>
+      <Routing />
+    </main>
   );
 };
 
