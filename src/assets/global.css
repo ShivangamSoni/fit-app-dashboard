@@ -1,0 +1,29 @@
+/* Global Reset */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* Global Variables */
+:root {
+  --bg-light: #1f2731;
+  --bg-dark: #101317;
+  --text: #ffffff;
+  --text-light: #bdbdbe;
+
+  --primary-green: #37f6c9;
+  --accent-green: #80d18d;
+  --accent-blue: #03c6fc;
+  --accent-pink: #f45d85;
+  --accent-yellow: #f5cb0f;
+}
+
+body {
+  font-size: 14px;
+  font-family: "Montserrat", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
