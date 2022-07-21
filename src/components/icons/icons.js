@@ -5,6 +5,8 @@ import { ReactComponent as CheckIcon } from "../../assets/icons/check.svg";
 import { ReactComponent as ScheduleIcon } from "../../assets/icons/schedule.svg";
 import { ReactComponent as ArrowIcon } from "../../assets/icons/arrow.svg";
 import { ReactComponent as BellIcon } from "../../assets/icons/bell.svg";
+import { ReactComponent as PlusIcon } from "../../assets/icons/plus.svg";
+import { ReactComponent as MinusIcon } from "../../assets/icons/minus.svg";
 
 const ICONS = {
   WalkIcon,
@@ -14,6 +16,8 @@ const ICONS = {
   ScheduleIcon,
   ArrowIcon,
   BellIcon,
+  PlusIcon,
+  MinusIcon,
 };
 
 export default ICONS;
