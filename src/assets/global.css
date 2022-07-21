@@ -19,11 +19,14 @@
   --accent-blue: #03c6fc;
   --accent-pink: #f45d85;
   --accent-yellow: #f5cb0f;
+
+  font-size: 14px;
 }
 
 body {
-  font-size: 14px;
   font-family: "Montserrat", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: var(--bg-light);
+  color: var(--text);
 }
