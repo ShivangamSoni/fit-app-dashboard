@@ -27,7 +27,7 @@ const UserData = ({ user }) => {
       </td>
 
       <td>
-        <StepsStats walked={stepsWalked} target={stepsTarget} />
+        <StepsStats userId={userId} walked={stepsWalked} target={stepsTarget} />
       </td>
 
       <td>
@@ -35,7 +35,7 @@ const UserData = ({ user }) => {
       </td>
 
       <td>
-        <NutritionStats {...nutritionStats} />
+        <NutritionStats userId={userId} {...nutritionStats} />
       </td>
 
       <td>

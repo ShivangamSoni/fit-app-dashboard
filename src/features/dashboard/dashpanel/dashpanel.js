@@ -1,14 +1,16 @@
+import { useUsersCtx } from "../../../context/UsersContext";
+
 import styles from "./styles.module.css";
 
 import UserTable from "../user-table/user-table";
 
-import USER_DATA from "../../../data/UserData.json";
-
 const DashPanel = () => {
+  const { users } = useUsersCtx();
+
   return (
     <div className={styles.panel}>
-      {USER_DATA.length > 0 ? (
-        <UserTable users={USER_DATA} />
+      {users.length > 0 ? (
+        <UserTable users={users} />
       ) : (
         <p className={styles.message}>No Data Found</p>
       )}
