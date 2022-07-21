@@ -1,0 +1,40 @@
+.target {
+  display: grid;
+  place-items: center;
+  row-gap: 5px;
+}
+
+.target__info {
+  display: grid;
+  place-items: center;
+
+  font-size: 16px;
+  font-weight: 700;
+}
+
+.target__info > span:last-child {
+  font-size: 10px;
+  font-weight: 500;
+  color: var(--text-light);
+}
+
+.target__btn {
+  width: 100%;
+  height: 16px;
+}
+
+.target__btn > :global(.CustomButton) {
+  border-radius: 4px;
+}
+
+.target__btn--plus > :global(.CustomButton):focus,
+.target__btn--plus > :global(.CustomButton):focus-visible,
+.target__btn--plus > :global(.CustomButton):hover {
+  background-color: var(--accent-blue);
+}
+
+.target__btn--minus > :global(.CustomButton):focus,
+.target__btn--minus > :global(.CustomButton):focus-visible,
+.target__btn--minus > :global(.CustomButton):hover {
+  background-color: var(--accent-pink);
+}
