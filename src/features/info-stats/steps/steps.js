@@ -6,7 +6,7 @@ import "react-circular-progressbar/dist/styles.css";
 
 import styles from "./styles.module.css";
 
-import abbreviateNumber from "../../../utils/abbreviateNumber";
+import Target from "../../../components/target/target";
 
 const StepsStats = ({ walked, target }) => {
   return (
@@ -30,10 +30,7 @@ const StepsStats = ({ walked, target }) => {
         </CircularProgressbarWithChildren>
       </div>
 
-      <div className={styles.steps__target}>
-        <span>{abbreviateNumber(target)}</span>
-        <span>target</span>
-      </div>
+      <Target value={target} handlePlus={() => {}} handleMinus={() => {}} />
     </div>
   );
 };
