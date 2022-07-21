@@ -1,0 +1,38 @@
+.steps {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  column-gap: 16px;
+}
+
+.steps__bar {
+  width: 60px;
+  height: 60px;
+}
+
+.bar__info {
+  display: grid;
+  place-items: center;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.bar__info > span:last-child {
+  font-size: 8px;
+  font-weight: 500;
+  color: var(--text-light);
+}
+
+.steps__target {
+  display: grid;
+  place-items: center;
+
+  font-size: 16px;
+  font-weight: 700;
+}
+
+.steps__target > span:last-child {
+  font-size: 10px;
+  font-weight: 500;
+  color: var(--text-light);
+}

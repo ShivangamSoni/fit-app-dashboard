@@ -1,0 +1,53 @@
+[
+  {
+    "userId": "shivangam-soni",
+    "name": "Shivangam Soni",
+    "email": "shivi@gmail.com",
+    "stepsWalked": 2547,
+    "stepsTarget": 4000,
+    "performedDate": "15 Oct",
+    "scheduledDate": "22 Oct",
+    "calorieIntake": 2547,
+    "calorieTarget": 2500,
+    "proteinConsumed": 50,
+    "proteinTarget": 100,
+    "carbConsumed": 20,
+    "carbTarget": 100,
+    "fatConsumed": 50,
+    "fatTarget": 100
+  },
+  {
+    "userId": "akhil-thankur",
+    "name": "Akhil Thankur",
+    "email": "ak@gmail.com",
+    "stepsWalked": 2547,
+    "stepsTarget": 4000,
+    "performedDate": "15 Oct",
+    "scheduledDate": "22 Oct",
+    "calorieIntake": 2547,
+    "calorieTarget": 2500,
+    "proteinConsumed": 50,
+    "proteinTarget": 100,
+    "carbConsumed": 20,
+    "carbTarget": 100,
+    "fatConsumed": 50,
+    "fatTarget": 100
+  },
+  {
+    "userId": "mridul-walia",
+    "name": "Mridul Walia",
+    "email": "m_walia@gmail.com",
+    "stepsWalked": 2547,
+    "stepsTarget": 4000,
+    "performedDate": "15 Oct",
+    "scheduledDate": "22 Oct",
+    "calorieIntake": 2547,
+    "calorieTarget": 2500,
+    "proteinConsumed": 50,
+    "proteinTarget": 100,
+    "carbConsumed": 20,
+    "carbTarget": 100,
+    "fatConsumed": 50,
+    "fatTarget": 100
+  }
+]

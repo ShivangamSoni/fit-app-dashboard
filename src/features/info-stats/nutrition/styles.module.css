@@ -1,0 +1,54 @@
+.nutrition {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  column-gap: 16px;
+}
+
+.nutrition__chart {
+  width: 60px;
+  height: 60px;
+
+  position: relative;
+}
+
+.chart__info {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  display: grid;
+  place-items: center;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.chart__info > span:last-child {
+  font-size: 8px;
+  font-weight: 500;
+  color: var(--text-light);
+}
+
+.nutrition__target {
+  display: grid;
+  place-items: center;
+
+  font-size: 16px;
+  font-weight: 700;
+}
+
+.nutrition__target > span:last-child {
+  font-size: 10px;
+  font-weight: 500;
+  color: var(--text-light);
+}
+
+.nutrition__btn {
+  align-self: stretch;
+  width: 30px;
+  min-height: 60px;
+
+  --bg: var(--bg-dark);
+  --color: var(--text);
+}

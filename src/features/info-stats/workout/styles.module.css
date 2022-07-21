@@ -1,0 +1,28 @@
+.workout {
+  display: flex;
+  align-items: stretch;
+  justify-content: center;
+  column-gap: 16px;
+}
+
+.workout__info {
+  display: grid;
+  place-items: center;
+}
+
+.workout__info > span {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  column-gap: 8px;
+
+  font-weight: 600;
+  font-size: 14px;
+}
+
+.workout__btn {
+  width: 30px;
+  min-height: 60px;
+  --bg: var(--bg-dark);
+  --color: var(--text);
+}
