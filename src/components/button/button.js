@@ -2,9 +2,9 @@ import { Link } from "react-router-dom";
 
 import styles from "./styles.module.css";
 
-const Button = ({ type, children, ...props }) => {
+const Button = ({ children, ...props }) => {
   // CustomLink & CustomButton are to be used for Custom Styling
-  if (type === "link") {
+  if (props.type === "link") {
     return (
       <Link className={`${styles.button} CustomLink`} {...props}>
         {children}
