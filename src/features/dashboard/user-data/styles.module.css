@@ -1,6 +1,14 @@
 .alert {
   width: 40px;
   height: 40px;
+}
 
-  --bg: var(--primary-green);
+.alert > :global(.CustomButton) {
+  background-color: var(--primary-green);
+}
+
+.alert > :global(.CustomButton):focus,
+.alert > :global(.CustomButton):focus-visible,
+.alert > :global(.CustomButton):hover {
+  background-color: var(--accent-pink);
 }
