@@ -4,8 +4,7 @@ import styles from "./styles.module.css";
 
 import ICONS from "../../../components/icons/icons";
 import Button from "../../../components/button/button";
-
-import abbreviateNumber from "../../../utils/abbreviateNumber";
+import Target from "../../../components/target/target";
 
 const NutritionStats = ({
   calorieIntake,
@@ -51,10 +50,11 @@ const NutritionStats = ({
         </div>
       </div>
 
-      <div className={styles.nutrition__target}>
-        <span>{abbreviateNumber(calorieTarget)}</span>
-        <span>target</span>
-      </div>
+      <Target
+        value={calorieTarget}
+        handlePlus={() => {}}
+        handleMinus={() => {}}
+      />
 
       <div className={styles.nutrition__btn}>
         <Button>
