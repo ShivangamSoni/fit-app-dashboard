@@ -1,9 +1,12 @@
+import UsersProvider from "./context/UsersContext";
 import Routing from "./pages";
 
 const App = () => {
   return (
     <main>
-      <Routing />
+      <UsersProvider>
+        <Routing />
+      </UsersProvider>
     </main>
   );
 };
