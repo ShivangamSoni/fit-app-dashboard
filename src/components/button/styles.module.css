@@ -4,14 +4,21 @@
   outline: none;
   cursor: pointer;
 
-  background-color: var(--bg);
-  color: var(--color);
-  padding: var(--padding);
+  background-color: var(--bg-dark);
+  color: var(--text);
 
   width: 100%;
   height: 100%;
-  border-radius: 8px;
+  border-radius: var(--radius, 8px);
 
   display: grid;
   place-items: center;
+
+  transition: all 300ms linear;
+}
+
+.button:focus,
+.button:focus-visible,
+.button:hover {
+  background-color: var(--accent-yellow);
 }
