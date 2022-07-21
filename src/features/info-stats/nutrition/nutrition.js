@@ -1,5 +1,7 @@
 import { PieChart } from "react-minimal-pie-chart";
 
+import { useUsersCtx } from "../../../context/UsersContext";
+
 import styles from "./styles.module.css";
 
 import ICONS from "../../../components/icons/icons";
@@ -7,6 +9,7 @@ import Button from "../../../components/button/button";
 import Target from "../../../components/target/target";
 
 const NutritionStats = ({
+  userId,
   calorieIntake,
   calorieTarget,
   proteinConsumed,
@@ -16,6 +19,8 @@ const NutritionStats = ({
   fatConsumed,
   fatTarget,
 }) => {
+  const { incrementCalories, decrementCalories } = useUsersCtx();
+
   return (
     <div className={styles.nutrition}>
       <div className={styles.nutrition__chart}>
@@ -52,8 +57,8 @@ const NutritionStats = ({
 
       <Target
         value={calorieTarget}
-        handlePlus={() => {}}
-        handleMinus={() => {}}
+        handlePlus={() => incrementCalories(userId)}
+        handleMinus={() => decrementCalories(userId)}
       />
 
       <div className={styles.nutrition__btn}>
