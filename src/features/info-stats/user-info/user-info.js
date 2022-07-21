@@ -2,7 +2,7 @@ import styles from "./styles.module.css";
 
 import UserImage from "../../../assets/user.png";
 
-const UserInfo = () => {
+const UserInfo = ({ name, email }) => {
   return (
     <div className={styles.user}>
       <div className={styles.user__img}>
@@ -10,8 +10,8 @@ const UserInfo = () => {
       </div>
 
       <div className={styles.user__info}>
-        <span>User name</span>
-        <span>User email</span>
+        <span>{name}</span>
+        <span>{email}</span>
       </div>
     </div>
   );

@@ -8,23 +8,34 @@ import StepsStats from "../../info-stats/steps/steps";
 import WorkoutStats from "../../info-stats/workout/workout";
 import NutritionStats from "../../info-stats/nutrition/nutrition";
 
-const UserData = () => {
+const UserData = ({ user }) => {
+  const {
+    userId,
+    name,
+    email,
+    stepsWalked,
+    stepsTarget,
+    performedDate,
+    scheduledDate,
+    ...nutritionStats
+  } = user;
+
   return (
     <tr>
       <td>
-        <UserInfo />
+        <UserInfo name={name} email={email} />
       </td>
 
       <td>
-        <StepsStats />
+        <StepsStats walked={stepsWalked} target={stepsTarget} />
       </td>
 
       <td>
-        <WorkoutStats />
+        <WorkoutStats performed={performedDate} scheduled={scheduledDate} />
       </td>
 
       <td>
-        <NutritionStats />
+        <NutritionStats {...nutritionStats} />
       </td>
 
       <td>

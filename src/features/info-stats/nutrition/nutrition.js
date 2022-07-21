@@ -5,7 +5,18 @@ import styles from "./styles.module.css";
 import ICONS from "../../../components/icons/icons";
 import Button from "../../../components/button/button";
 
-const NutritionStats = () => {
+import abbreviateNumber from "../../../utils/abbreviateNumber";
+
+const NutritionStats = ({
+  calorieIntake,
+  calorieTarget,
+  proteinConsumed,
+  proteinTarget,
+  carbConsumed,
+  carbTarget,
+  fatConsumed,
+  fatTarget,
+}) => {
   return (
     <div className={styles.nutrition}>
       <div className={styles.nutrition__chart}>
@@ -13,31 +24,35 @@ const NutritionStats = () => {
           data={[
             {
               title: "Protein",
-              value: 1,
+              value: proteinConsumed,
               color: "var(--accent-pink)",
             },
             {
               title: "Fats",
-              value: 1,
+              value: fatConsumed,
               color: "var(--accent-yellow)",
             },
             {
               title: "Carbs",
-              value: 1,
+              value: carbConsumed,
               color: "var(--accent-blue)",
             },
           ]}
+          totalValue={proteinTarget + fatTarget + carbTarget}
           lineWidth={25}
           startAngle={-90}
+          background="var(--text)"
+          animate
+          reveal={100}
         />
         <div className={styles.chart__info}>
-          <span>2547</span>
+          <span>{calorieIntake}</span>
           <span>calories</span>
         </div>
       </div>
 
       <div className={styles.nutrition__target}>
-        <span>2.5K</span>
+        <span>{abbreviateNumber(calorieTarget)}</span>
         <span>target</span>
       </div>
 

@@ -6,15 +6,17 @@ import "react-circular-progressbar/dist/styles.css";
 
 import styles from "./styles.module.css";
 
-const StepsStats = () => {
+import abbreviateNumber from "../../../utils/abbreviateNumber";
+
+const StepsStats = ({ walked, target }) => {
   return (
     <div className={styles.steps}>
       <div className={styles.steps__bar}>
         <CircularProgressbarWithChildren
-          value={2547}
-          maxValue={4000}
+          value={walked}
+          maxValue={target}
           styles={buildStyles({
-            trailColor: "#fff",
+            trailColor: "var(--text)",
             pathColor: "var(--accent-green)",
             rotation: 0.25,
             strokeLinecap: "butt",
@@ -22,14 +24,14 @@ const StepsStats = () => {
           })}
         >
           <div className={styles.bar__info}>
-            <span>2547</span>
+            <span>{walked}</span>
             <span>walked</span>
           </div>
         </CircularProgressbarWithChildren>
       </div>
 
       <div className={styles.steps__target}>
-        <span>4K</span>
+        <span>{abbreviateNumber(target)}</span>
         <span>target</span>
       </div>
     </div>

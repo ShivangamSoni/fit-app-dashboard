@@ -4,7 +4,7 @@ import ICONS from "../../../components/icons/icons";
 
 import UserData from "../user-data/user-data";
 
-const UserTable = () => {
+const UserTable = ({ users }) => {
   return (
     <table className={styles.table}>
       <thead>
@@ -33,7 +33,9 @@ const UserTable = () => {
       </thead>
 
       <tbody>
-        <UserData />
+        {users.map((user) => (
+          <UserData key={user.userId} user={user} />
+        ))}
       </tbody>
     </table>
   );
