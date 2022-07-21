@@ -62,7 +62,7 @@ const NutritionStats = ({
       />
 
       <div className={styles.nutrition__btn}>
-        <Button>
+        <Button type="link" to={`/${userId}/nutrition`}>
           <ICONS.ArrowIcon />
         </Button>
       </div>

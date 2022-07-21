@@ -3,7 +3,7 @@ import styles from "./styles.module.css";
 import ICONS from "../../../components/icons/icons";
 import Button from "../../../components/button/button";
 
-const WorkoutStats = ({ performed, scheduled }) => {
+const WorkoutStats = ({ userId, performed, scheduled }) => {
   return (
     <div className={styles.workout}>
       <div className={styles.workout__info}>
@@ -19,7 +19,7 @@ const WorkoutStats = ({ performed, scheduled }) => {
       </div>
 
       <div className={styles.workout__btn}>
-        <Button>
+        <Button type="link" to={`/${userId}/workout`}>
           <ICONS.ArrowIcon />
         </Button>
       </div>
