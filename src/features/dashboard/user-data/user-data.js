@@ -31,7 +31,11 @@ const UserData = ({ user }) => {
       </td>
 
       <td>
-        <WorkoutStats performed={performedDate} scheduled={scheduledDate} />
+        <WorkoutStats
+          userId={userId}
+          performed={performedDate}
+          scheduled={scheduledDate}
+        />
       </td>
 
       <td>
