@@ -28,12 +28,18 @@
 .table th:nth-child(1),
 .table td:nth-child(1) {
   padding-left: 14px;
-  border-radius: 10px 0 0 10px;
 }
 
 .table th:last-child,
 .table td:last-child {
   padding-right: 14px;
+}
+
+.table td:nth-child(1) {
+  border-radius: 10px 0 0 10px;
+}
+
+.table td:last-child {
   border-radius: 0 10px 10px 0;
 }
 
