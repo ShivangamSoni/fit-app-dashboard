@@ -17,6 +17,7 @@ const UserData = ({ user }) => {
     stepsTarget,
     performedDate,
     scheduledDate,
+    feedback,
     ...nutritionStats
   } = user;
 
@@ -35,6 +36,7 @@ const UserData = ({ user }) => {
           userId={userId}
           performed={performedDate}
           scheduled={scheduledDate}
+          feedback={feedback}
         />
       </td>
 

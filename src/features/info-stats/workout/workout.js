@@ -3,7 +3,13 @@ import styles from "./styles.module.css";
 import ICONS from "../../../components/icons/icons";
 import Button from "../../../components/button/button";
 
-const WorkoutStats = ({ userId, performed, scheduled, link = true }) => {
+const WorkoutStats = ({
+  userId,
+  performed,
+  scheduled,
+  feedback,
+  link = true,
+}) => {
   return (
     <div className={styles.workout}>
       <div className={styles.workout__info}>
@@ -19,9 +25,13 @@ const WorkoutStats = ({ userId, performed, scheduled, link = true }) => {
       </div>
 
       {link && (
-        <div className={styles.workout__btn}>
+        <div
+          className={`${styles.workout__btn} ${
+            feedback && styles["workout__btn--feedback"]
+          }`}
+        >
           <Button type="link" to={`/${userId}/workout`}>
-            <ICONS.ArrowIcon />
+            {feedback ? <ICONS.ExclamationIcon /> : <ICONS.ArrowIcon />}
           </Button>
         </div>
       )}

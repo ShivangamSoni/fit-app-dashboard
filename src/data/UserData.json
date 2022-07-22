@@ -14,7 +14,8 @@
     "carbConsumed": 20,
     "carbTarget": 100,
     "fatConsumed": 50,
-    "fatTarget": 100
+    "fatTarget": 100,
+    "feedback": true
   },
   {
     "userId": "akhil-thankur",
@@ -31,7 +32,8 @@
     "carbConsumed": 20,
     "carbTarget": 100,
     "fatConsumed": 50,
-    "fatTarget": 100
+    "fatTarget": 100,
+    "feedback": false
   },
   {
     "userId": "mridul-walia",
@@ -48,6 +50,7 @@
     "carbConsumed": 20,
     "carbTarget": 100,
     "fatConsumed": 50,
-    "fatTarget": 100
+    "fatTarget": 100,
+    "feedback": true
   }
 ]

@@ -7,6 +7,7 @@ import { ReactComponent as ArrowIcon } from "../../assets/icons/arrow.svg";
 import { ReactComponent as BellIcon } from "../../assets/icons/bell.svg";
 import { ReactComponent as PlusIcon } from "../../assets/icons/plus.svg";
 import { ReactComponent as MinusIcon } from "../../assets/icons/minus.svg";
+import { ReactComponent as ExclamationIcon } from "../../assets/icons/exclamation.svg";
 
 const ICONS = {
   WalkIcon,
@@ -18,6 +19,7 @@ const ICONS = {
   BellIcon,
   PlusIcon,
   MinusIcon,
+  ExclamationIcon,
 };
 
 export default ICONS;

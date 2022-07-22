@@ -23,6 +23,14 @@
 .workout__btn {
   width: 30px;
   min-height: 60px;
-  --bg: var(--bg-dark);
-  --color: var(--text);
+}
+
+.workout__btn--feedback :global(.CustomLink) {
+  background-color: var(--primary-red);
+}
+
+.workout__btn--feedback :global(.CustomLink):focus,
+.workout__btn--feedback :global(.CustomLink):focus-visible,
+.workout__btn--feedback :global(.CustomLink):hover {
+  background-color: var(--accent-pink);
 }
