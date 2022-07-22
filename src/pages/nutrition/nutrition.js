@@ -1,13 +1,11 @@
-import { useParams } from "react-router-dom";
-
 import Page from "../../components/layout/page";
 
-const Nutrition = () => {
-  const { userId } = useParams();
+import NutritionDetails from "../../features/nutrition/detail";
 
+const Nutrition = () => {
   return (
     <Page>
-      <h1>Nutrition: {userId}</h1>
+      <NutritionDetails />
     </Page>
   );
 };
