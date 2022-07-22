@@ -1,0 +1,46 @@
+.stat {
+  background-color: var(--bg-500);
+  padding: 5px 8px;
+  border-radius: inherit;
+}
+
+.stat__info {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 6px;
+
+  font-size: 10.53px;
+  font-weight: 500;
+}
+
+.stat__info > span:nth-child(1) {
+  text-transform: uppercase;
+}
+
+.stat__progress {
+  height: 10px;
+  background-color: var(--bg-dark);
+  border-radius: 100vmax;
+  overflow: hidden;
+}
+
+.progress__complete {
+  height: inherit;
+  background-color: var(--bar, var(--primary-green));
+  position: relative;
+  border-radius: inherit;
+}
+
+.progress__complete > span {
+  font-size: 6.48px;
+  font-weight: 500;
+  color: var(--label, var(--primary-green));
+
+  padding: 0 2px;
+
+  position: absolute;
+  top: 50%;
+  left: 100%;
+  transform: translateY(-50%);
+}

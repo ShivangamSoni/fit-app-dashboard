@@ -7,6 +7,8 @@ import styles from "./styles.module.css";
 import ICONS from "../../../components/icons/icons";
 import Button from "../../../components/button/button";
 import Target from "../../../components/target/target";
+import Tooltip from "../../../components/tooltip/tooltip";
+import NutritionMacros from "../nutrition-macros/nutrition-macros";
 
 const NutritionStats = ({
   userId,
@@ -22,39 +24,52 @@ const NutritionStats = ({
 }) => {
   const { incrementCalories, decrementCalories } = useUsersCtx();
 
+  const macroStats = [
+    {
+      id: 1,
+      title: "Protein",
+      target: proteinTarget,
+      value: proteinConsumed,
+      color: "var(--accent-pink)",
+    },
+    {
+      id: 2,
+      title: "Fats",
+      target: fatTarget,
+      value: fatConsumed,
+      color: "var(--accent-blue)",
+    },
+    {
+      id: 3,
+      title: "Carbs",
+      target: carbTarget,
+      value: carbConsumed,
+      color: "var(--accent-yellow)",
+    },
+  ];
+
   return (
     <div className={styles.nutrition}>
-      <div className={styles.nutrition__chart}>
-        <PieChart
-          data={[
-            {
-              title: "Protein",
-              value: proteinConsumed,
-              color: "var(--accent-pink)",
-            },
-            {
-              title: "Fats",
-              value: fatConsumed,
-              color: "var(--accent-yellow)",
-            },
-            {
-              title: "Carbs",
-              value: carbConsumed,
-              color: "var(--accent-blue)",
-            },
-          ]}
-          totalValue={proteinTarget + fatTarget + carbTarget}
-          lineWidth={25}
-          startAngle={-90}
-          background="var(--text)"
-          animate
-          reveal={100}
-        />
-        <div className={styles.chart__info}>
-          <span>{calorieIntake}</span>
-          <span>calories</span>
+      <Tooltip
+        content={<NutritionMacros stats={macroStats} />}
+        tipColor="var(--bg-300)"
+      >
+        <div className={styles.nutrition__chart}>
+          <PieChart
+            data={macroStats}
+            totalValue={proteinTarget + fatTarget + carbTarget}
+            lineWidth={25}
+            startAngle={-90}
+            background="var(--text)"
+            animate
+            reveal={100}
+          />
+          <div className={styles.chart__info}>
+            <span>{calorieIntake}</span>
+            <span>calories</span>
+          </div>
         </div>
-      </div>
+      </Tooltip>
 
       <Target
         value={calorieTarget}

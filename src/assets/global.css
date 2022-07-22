@@ -9,6 +9,8 @@
 
 /* Global Variables */
 :root {
+  --bg-300: #323a43;
+  --bg-500: #1c232c;
   --bg-light: #1f2731;
   --bg-dark: #101317;
   --text: #ffffff;
