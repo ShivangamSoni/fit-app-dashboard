@@ -3,7 +3,7 @@ import styles from "./styles.module.css";
 import ICONS from "../../../components/icons/icons";
 import Button from "../../../components/button/button";
 
-const WorkoutStats = ({ userId, performed, scheduled }) => {
+const WorkoutStats = ({ userId, performed, scheduled, link = true }) => {
   return (
     <div className={styles.workout}>
       <div className={styles.workout__info}>
@@ -18,11 +18,13 @@ const WorkoutStats = ({ userId, performed, scheduled }) => {
         </span>
       </div>
 
-      <div className={styles.workout__btn}>
-        <Button type="link" to={`/${userId}/workout`}>
-          <ICONS.ArrowIcon />
-        </Button>
-      </div>
+      {link && (
+        <div className={styles.workout__btn}>
+          <Button type="link" to={`/${userId}/workout`}>
+            <ICONS.ArrowIcon />
+          </Button>
+        </div>
+      )}
     </div>
   );
 };
