@@ -3,6 +3,8 @@ import styles from "./styles.module.css";
 import ICONS from "../../../components/icons/icons";
 import Button from "../../../components/button/button";
 
+import epochToDayMonth from "../../../utils/epochToDayMonth";
+
 const WorkoutStats = ({
   userId,
   performed,
@@ -10,17 +12,19 @@ const WorkoutStats = ({
   feedback,
   link = true,
 }) => {
+  const isScheduleOver = new Date(scheduled) - new Date() <= 0;
+
   return (
     <div className={styles.workout}>
       <div className={styles.workout__info}>
         <span>
           <ICONS.CheckIcon />
-          <span>{performed}</span>
+          <span>{epochToDayMonth(performed)}</span>
         </span>
 
-        <span>
+        <span className={`${isScheduleOver && styles["info__schedule--over"]}`}>
           <ICONS.ScheduleIcon />
-          <span>{scheduled}</span>
+          <span>{epochToDayMonth(scheduled)}</span>
         </span>
       </div>
 
