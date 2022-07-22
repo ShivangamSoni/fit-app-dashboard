@@ -18,6 +18,7 @@ const NutritionStats = ({
   carbTarget,
   fatConsumed,
   fatTarget,
+  link = true,
 }) => {
   const { incrementCalories, decrementCalories } = useUsersCtx();
 
@@ -61,11 +62,13 @@ const NutritionStats = ({
         handleMinus={() => decrementCalories(userId)}
       />
 
-      <div className={styles.nutrition__btn}>
-        <Button type="link" to={`/${userId}/nutrition`}>
-          <ICONS.ArrowIcon />
-        </Button>
-      </div>
+      {link && (
+        <div className={styles.nutrition__btn}>
+          <Button type="link" to={`/${userId}/nutrition`}>
+            <ICONS.ArrowIcon />
+          </Button>
+        </div>
+      )}
     </div>
   );
 };
