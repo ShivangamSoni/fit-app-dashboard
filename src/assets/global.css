@@ -20,6 +20,8 @@
   --accent-pink: #f45d85;
   --accent-yellow: #f5cb0f;
 
+  --shadow: 2px 3px 42px rgba(0, 0, 0, 0.5);
+
   font-size: 14px;
 }
 
