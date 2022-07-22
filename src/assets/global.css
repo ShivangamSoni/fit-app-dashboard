@@ -5,6 +5,26 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+
+  /*  Scroll Bar For Firefox */
+  scrollbar-width: thin;
+  scrollbar-color: var(--text-light) var(--bg-dark);
+  scroll-behavior: smooth;
+}
+
+/* Scroll Bar Style For Chromium Based Browsers */
+*::-webkit-scrollbar {
+  width: 5px;
+}
+
+*::-webkit-scrollbar-track {
+  background: var(--bg-dark);
+  border-radius: 20px;
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: var(--text-light);
+  border-radius: 20px;
 }
 
 /* Global Variables */
