@@ -33,10 +33,12 @@ const getPos = (elem, tooltip, placement, space) => {
   const elemRect = elem.getBoundingClientRect();
 
   let recursiveCounter = 0;
+  let finalTooltipPosition = placement;
 
   // It's a Recursive Function for getting the position within boundary
   (function getAccuratePosition(placement) {
     placement = createPlacement(placement);
+    finalTooltipPosition = placement.current;
 
     switch (placement.current) {
       case "top": {
@@ -82,10 +84,18 @@ const getPos = (elem, tooltip, placement, space) => {
     }
   })(placement);
 
+  tooltip.classList.add(`Tooltip_${finalTooltipPosition}`);
+
   return pos;
 };
 
-const Tooltip = ({ content, placement = "bottom", space = 10, children }) => {
+const Tooltip = ({
+  content,
+  placement = "bottom",
+  space = 10,
+  tipColor = "transparent",
+  children,
+}) => {
   const [show, setShow] = useState(false);
   const posRef = useRef({ x: 10, y: 10 });
   const tooltipRef = useRef(null);
@@ -113,10 +123,9 @@ const Tooltip = ({ content, placement = "bottom", space = 10, children }) => {
           ref={tooltipRef}
           className={`${styles.tooltip} ${show && styles.visible}`}
           style={{
-            top: posRef.current.y,
-            left: posRef.current.x,
-            transformOrigin: createPlacement(placement).negate(),
-            transform: `scale(${show ? 1 : 0.5})`,
+            "top": posRef.current.y,
+            "left": posRef.current.x,
+            "--bg-tip": tipColor,
           }}
         >
           {content}
