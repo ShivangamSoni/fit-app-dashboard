@@ -7,6 +7,7 @@
 .target__info {
   display: grid;
   place-items: center;
+  width: 40px;
 
   font-size: 16px;
   font-weight: 700;
@@ -37,4 +38,16 @@
 .target__btn--minus > :global(.CustomButton):focus-visible,
 .target__btn--minus > :global(.CustomButton):hover {
   background-color: var(--accent-pink);
+}
+
+@media screen and (max-width: 660px) {
+  .target__info {
+    font-size: 14px;
+  }
+}
+
+@media screen and (max-width: 420px) {
+  .target__info {
+    font-size: 12px;
+  }
 }
