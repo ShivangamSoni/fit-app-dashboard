@@ -22,36 +22,40 @@ const UserData = ({ user }) => {
   } = user;
 
   return (
-    <tr>
-      <td>
+    <li className={styles.container}>
+      <div className={styles.userInfo}>
         <UserInfo name={name} email={email} />
-      </td>
+      </div>
 
-      <td>
-        <StepsStats userId={userId} walked={stepsWalked} target={stepsTarget} />
-      </td>
-
-      <td>
-        <WorkoutStats
-          userId={userId}
-          performed={performedDate}
-          scheduled={scheduledDate}
-          feedback={feedback}
-        />
-      </td>
-
-      <td>
-        <NutritionStats userId={userId} {...nutritionStats} />
-      </td>
-
-      <td>
-        <div className={styles.alert}>
-          <Button>
-            <ICONS.BellIcon />
-          </Button>
+      <div className={styles.stats}>
+        <div>
+          <StepsStats
+            userId={userId}
+            walked={stepsWalked}
+            target={stepsTarget}
+          />
         </div>
-      </td>
-    </tr>
+
+        <div>
+          <WorkoutStats
+            userId={userId}
+            performed={performedDate}
+            scheduled={scheduledDate}
+            feedback={feedback}
+          />
+        </div>
+
+        <div>
+          <NutritionStats userId={userId} {...nutritionStats} />
+        </div>
+      </div>
+
+      <div className={styles.alert}>
+        <Button>
+          <ICONS.BellIcon />
+        </Button>
+      </div>
+    </li>
   );
 };
 
